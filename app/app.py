@@ -1,6 +1,11 @@
 import streamlit as st
 import pandas as pd
 
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from src.data_loader import DataLoader
 from src.feature_engineering import FeatureEngineering
 from src.model import ProbabilityModel
