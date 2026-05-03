@@ -1,0 +1,89 @@
+
+# DealEdge: Probabilistic Merger Arbitrage Engine
+
+---
+
+## Hook
+
+I built a quantitative merger arbitrage engine that identifies mispriced M&A deals by modeling deal completion probabilities and estimating risk-adjusted expected returns.
+
+---
+
+## What It Does
+
+* Screens M&A deals based on arbitrage spread and probability of completion
+* Estimates expected returns using probabilistic payoff modeling
+* Simulates portfolio performance through backtesting
+* Provides risk analytics including drawdowns, VaR, and stress scenarios
+
+Key Outputs:
+
+* Deal Screener (ranked opportunities)
+* Equity Curve (portfolio performance)
+* Risk Dashboard (20+ analytical charts)
+
+---
+
+## How It Works
+
+Pipeline:
+
+Data → Feature Engineering → Probability Model → Expected Return → Portfolio Construction → Risk Analysis
+
+### Core Logic:
+
+* Spread reflects market-implied risk
+* Logistic regression estimates deal success probability
+* Expected return combines:
+
+  * upside (deal closes)
+  * downside (deal breaks)
+
+---
+
+## Results
+
+* Positive expected return portfolio (model-based)
+* Diversified deal exposure across sectors
+* Risk visualization via drawdowns and tail risk metrics
+
+Metrics:
+
+* Expected Return: (based on model output)
+* Volatility: (portfolio-level)
+* Drawdown: (max observed decline)
+
+---
+
+## What’s Missing (Limitations)
+
+* No transaction cost modeling
+* Simplified break price assumption (fixed % drop)
+* Synthetic dataset (initial version)
+* No real-time data integration
+
+---
+
+## Why This Matters
+
+Merger arbitrage is an event-driven strategy where pricing inefficiencies arise from uncertainty. This system demonstrates how quantitative modeling can structure decision-making under uncertainty and evaluate risk-adjusted opportunities.
+
+---
+
+## Tech Stack
+
+* Python (Pandas, NumPy)
+* Scikit-learn
+* Plotly
+* Streamlit
+
+---
+
+## Next Steps
+
+* Integrate real M&A deal data (SEC filings)
+* Improve break price modeling
+* Add transaction cost and slippage
+* Upgrade model (XGBoost / ensemble methods)
+
+---
